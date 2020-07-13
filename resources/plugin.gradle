@@ -20,6 +20,6 @@ allprojects {
         maven { url 'http://developer.huawei.com/repo/' }
     }
 }
-cdvPluginPostBuildExtras.add({
-    apply plugin: 'com.huawei.agconnect'
-})
+//cdvPluginPostBuildExtras.add({
+//    apply plugin: 'com.huawei.agconnect'
+//})
