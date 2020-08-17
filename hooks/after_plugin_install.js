@@ -39,7 +39,7 @@ module.exports = function (context) {
 }
 
 function addAGConnectDependency(lines) {
-  var AG_CONNECT_DEPENDENCY = 'classpath \'com.huawei.agconnect:agcp:1.2.1.300\' ' + COMMENT;
+  var AG_CONNECT_DEPENDENCY = 'classpath \'com.huawei.agconnect:agcp:1.1.1.300\' ' + COMMENT;
 
   var pattern = /(\s*)classpath(\s+)\'com.android.tools.build:gradle:([0-9-\.\:]+)/m;
 
@@ -58,7 +58,7 @@ function addAGConnectDependency(lines) {
 
 
 function addHuaweiRepo(lines) {
-  var HUAWEI_REPO = 'maven { url \'https://developer.huawei.com/repo/\' } ' + COMMENT
+  var HUAWEI_REPO = 'maven { url \'http://developer.huawei.com/repo/\' } ' + COMMENT
   var pattern = /(\s*)jcenter\(\)/m;
 
   var indexList = [];

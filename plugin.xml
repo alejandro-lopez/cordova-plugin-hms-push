@@ -1,13 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="cordova-plugin-hms-push" 
-        version="1.0.0" 
+        version="5.0.0" 
         xmlns="http://apache.org/cordova/ns/plugins/1.0" 
         xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Cordova Plugin HMS Push</name>
-
     <description>Cordova Plugin HMS Push</description>
     <license>Apache 2.0</license>
-    <keywords>android, toast</keywords>
+    <keywords>android, huawei, hms, push</keywords>
 
     <engines>
       <engine name="cordova" version=">=3.0.0" />
@@ -16,7 +15,8 @@
     <js-module name="HMSPush" src="www/HMSPush.js">
         <clobbers target="HMSPush" />
     </js-module>
-
+    <js-module name="utils" src="www/utils.js"/>
+    
     <platform name="android">
 
         <hook type="after_plugin_install" src="hooks/after_plugin_install.js" />
@@ -29,22 +29,14 @@
 			<uses-permission android:name="android.permission.WAKE_LOCK" />
 		</config-file>
         <config-file target="AndroidManifest.xml" parent="application">
-			<!-- <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService" /> -->
-			<!-- <service android:name="com.huawei.cordova.hms.push.CordovaHmsMessageService"> -->
-				<!-- <intent-filter> -->
-					<!-- <action android:name="com.google.firebase.MESSAGING_EVENT"/> -->
-                    <!-- <action android:name="com.huawei.android.push.intent.REGISTRATION"/> -->
-				<!-- </intent-filter> -->
-			<!-- </service> -->
             <service android:name="com.huawei.cordova.hms.push.CordovaHmsMessageService" android:exported="true">
                 <intent-filter>
                     <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
                 </intent-filter>
             </service>
-			<!-- <receiver android:name="org.apache.cordova.firebase.OnNotificationOpenReceiver"/> -->
         </config-file>
 
-      <framework src="com.huawei.hms:push:4.0.2.300" />
+      <framework src="com.huawei.hms:push:5.0.0.300" />
       <framework src="resources/plugin.gradle" custom="true" type="gradleReference"/>
     
 

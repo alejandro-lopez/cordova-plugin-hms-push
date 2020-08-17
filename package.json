@@ -1,7 +1,8 @@
 {
-  "name": "cordova-plugin-hms-push-gt",
-  "version": "4.0.4",
-  "description": "cordova-plugin-hms-push",
+  "name": "@hmscore/cordova-plugin-hms-push",
+  "version": "5.0.0-300",
+  "description": "Huawei Push Cordova Plugin",
+  "types": "types/index.d.ts",
   "cordova": {
     "id": "cordova-plugin-hms-push",
     "platforms": [
@@ -15,28 +16,23 @@
     "huaweipush",
     "ecosystem:cordova"
   ],
-  "author": "",
   "files": [
-    "hooks/**",
-    "resources/**",
-    "src/**",
-    "www/**",
+    "hooks",
+    "resources",
+    "src",
+    "www",
     "LICENCE",
     "package.json",
     "plugin.xml",
-    "README.md"
+    "README.md",
+    "ionic",
+    "scripts",
+    "types",
+    "wrapper",
+    "tsconfig.json"
   ],
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aalonzolu/cordova-plugin-hms-push.git"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/aalonzolu/cordova-plugin-hms-push/issues"
-  },
-  "homepage": "https://github.com/aalonzolu/cordova-plugin-hms-push#readme"
+  "devDependencies": {
+    "@types/cordova": "0.0.34"
+  }
+  
 }
