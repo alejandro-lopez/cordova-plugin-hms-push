@@ -36,7 +36,10 @@
             </service>
         </config-file>
 
-      <framework src="com.huawei.hms:push:5.0.0.300" />
+      
+      <framework src="androidx.appcompat:appcompat:1.0.2"/>
+      <framework src="androidx.constraintlayout:constraintlayout:1.1.3"/>
+       <framework src="com.huawei.hms:push:5.0.0.300" />
       <framework src="resources/plugin.gradle" custom="true" type="gradleReference"/>
     
 
