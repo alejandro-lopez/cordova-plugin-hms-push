@@ -55,6 +55,7 @@ public class CordovaHmsMessageService extends HmsMessageService {
                 Bundle bundle = new Bundle();
 
                 bundle.putString("messageType", messageType);
+                bundle.putString("data", data.toString());
                 for (Map.Entry<String,String> e : data.entrySet()) {
                     bundle.putString(e.getKey(), e.getValue());
                 }
