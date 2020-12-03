@@ -34,7 +34,7 @@
             </service>
         </config-file>
 
-      <framework src="com.huawei.hms:push:5.0.0.300" />
+      <framework src="com.huawei.hms:push:5.0.4.302" />
       <framework src="resources/plugin.gradle" custom="true" type="gradleReference"/>
     
 
