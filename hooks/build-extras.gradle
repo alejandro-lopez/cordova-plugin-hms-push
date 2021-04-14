@@ -1,0 +1,11 @@
+buildscript {
+    repositories {      
+        maven { url 'http://developer.huawei.com/repo/' }
+    }
+}
+
+allprojects {
+    repositories {  
+        maven { url 'http://developer.huawei.com/repo/' }
+    }
+}
