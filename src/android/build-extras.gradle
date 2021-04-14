@@ -13,7 +13,17 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */
+buildscript {
+    repositories {      
+        maven { url 'http://developer.huawei.com/repo/' }
+    }
+}
 
+allprojects {
+    repositories {  
+        maven { url 'http://developer.huawei.com/repo/' }
+    }
+}
 def pluginMinSdk = 19;
 def needAGC = true;
 
