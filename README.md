@@ -1,146 +1,58 @@
-# CORDOVA-PLUGIN-HMS-PUSH
+# Cordova HMS Push
 
+Cordova Push Kit is a messaging service provided for you. It establishes a messaging channel from the cloud to devices. By integrating Cordova Push Kit, you can send messages to your apps on users' devices in real time. This helps you maintain closer ties with users and increases user awareness of and engagement with your apps.
 
-- Contents
-- Introduction
-- Installation Guide
-- Cordova SDK API Method Definition
-- Configure description
-- Licensing and Terms
+This plugin enables communication between Huawei Push SDK and Cordova platform. It exposes all functionality provided by Huawei Push SDK.
 
-## 1. Introduction
-The Cordova SDK code encapsulates the Huawei push client interface. It provides many APIs for your reference or use.
+[> Learn More](https://developer.huawei.com/consumer/en/doc/development/HMS-Plugin-Guides/introduction-0000001050135701)
 
-The Cordova SDK code package is described as follows:
-
-**src/main/:** core layer, bridging PushSDK bottom-layer code;
-
-**www/HMSPush.js:** external interface definition layer, which is used to define interface classes or reference files.
-
-## 2. Installation Guide
+## Installation
 
 ### Cordova
 
-1. Download the Cordova Push SDK Plugin.
-2. Add Platform To Project.
+```bash
+$ cordova plugin add @hmscore/cordova-plugin-hms-push
+```
 
-     ***```cordova platform add android```***
+### Ionic with Cordova Runtime
 
-3. You can either install the plugin through npm or by downloading from downloads page, [Cordova plugin package](https://developer.huawei.com/consumer/en/doc/HMS-Plugin-Library-V1/cordova-sdk-download-0000001050133798-V1).
+```bash
+$ ionic cordova plugin add @hmscore/cordova-plugin-hms-push
+```
+  
+### Ionic with Capacitor Runtime
 
-    a. Run the following command in the root directory of your Cordova project to install it through npm.
+```bash
+$ npm install @hmscore/cordova-plugin-hms-push
+```
 
-    ***```cordova plugin add @hmscore/cordova-plugin-hms-push```***
-    
+### Ionic Native Wrappers
 
-    b. Run the following command in the root directuory of your Cordova project to install it manually after downloading the plugin. <br>
-        
-    ***```cordova plugin add <CORDOVA_PUSH_PLUGIN_PATH>```***
-    
+```bash
+$ npm install @hmscore/ionic-native-hms-push
+```
 
-4. Check whether the Cordova Push SDK is successfully added to Plugin folder in the root directory of the Cordova project.
+## Documentation
 
-5. Download **agconnect-services.json** file from AppGallery Connect.
-   
-6. Add **agconnect-services.json** and **jks** file to root directory.
-   
-7. Add **build.json** file to your project's root.
+- [Quick Start](https://developer.huawei.com/consumer/en/doc/development/HMS-Plugin-Guides/prepare-dev-env-0000001050133754)
+- [Reference](https://developer.huawei.com/consumer/en/doc/development/HMS-Plugin-References/overview-0000001050133780)
 
-8. Make sure widget id is same as your package name in config.xml. Otherwise demo project will not work properly.
- 
-9. Then run the Cordova app 
+### Additional Topics
 
-     ***```cordova run android```***
+- [Enabling HUAWEI Push Service](https://developer.huawei.com/consumer/en/doc/development/HMS-Plugin-Guides/config-agc-0000001050135709#EN-US_TOPIC_0000001050136396__section7787102592217)
+- [Receiving Data Messages In App Killed State](https://developer.huawei.com/consumer/en/doc/development/HMS-Plugin-Guides/receiving-data-messages-at-app-killed-state-0000001058644809)
 
-### Ionic
+## Questions or Issues
 
-1. Download the Cordova Push SDK Plugin through npm or by downloading from downloads page, [Cordova plugin package](https://developer.huawei.com/consumer/en/doc/HMS-Plugin-Library-V1/cordova-sdk-download-0000001050133798-V1). <br><br>
+If you have questions about how to use HMS samples, try the following options:
 
-    a. Run the following command in the root directuory of your Cordova project to install it manually after downloading the plugin. <br>
-    
-    ***```npm install <CORDOVA_PUSH_PLUGIN_PATH>```***
-    <br>
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-mobile-services) is the best place for any programming questions. Be sure to tag your question with **`huawei-mobile-services`**.
+- [GitHub](https://github.com/HMS-Core/hms-cordova-plugin) is the official repository for these plugins, You can open an issue or submit your ideas.
+- [Huawei Developer Forum](https://forums.developer.huawei.com/forumPortal/en/home?fid=0101187876626530001) HMS Core Module is great for general questions, or seeking recommendations and opinions.
+- [Huawei Developer Docs](https://developer.huawei.com/consumer/en/doc/overview/HMS-Core-Plugin) is place to official documentation for all HMS Core Kits, you can find detailed documentations in there.
 
-    b. Run the following command in the root directory of your Cordova project to install it through npm.
+If you run into a bug in our samples, please submit an issue to the [GitHub repository](https://github.com/HMS-Core/hms-cordova-plugin).
 
-    ***`npm install @hmscore/cordova-plugin-hms-push`***
-     
+## License
 
-2. Check whether the Cordova Push SDK is successfully added to the node_modules directory.
-
-3. If you want full Ionic support with code completion etc, install"@ionic-native/core" in your project. <br>
-
-    ***`npm install @ionic-native/core --save-dev`***
-
-4. Copy the "ionic/dist/hms-push" folder from library to "node_modules/@ionic-native" folder under your Ionic project.
-
-5. Compile ionic project.
-
-    a. ***`ionic build`***
-
-    b. ***`npx cap init [appName] [appId]`*** 
-    
-    > ***NOTE*** <br>
-    > where appName is the name of your app, and appId is package_name in your agconnect-services.json file (ex: com.example.app).
-
-6. Add a native platform to your project.
-
-    ***`ionic capacitor add android`***
-
-7. Make sure your project has a build.gradle file with a maven repository address and agconnect service dependencies.
-
-8. Add the plug-in configuration to the build.gradle file in the app directory. And add push service implementation into to dependencies.
-
-9. Add agconnect-services.json and jks file to the app directory in your Android project.
-
-10. To update dependencies, and copy any web assets to your project, add following code.
-
-    ***`npx capacitor sync`***
-
-11. Then run the Ionic app.
-        
-    ***`ionic capacitor run android`***
-
-    After this command, the demo will be opened android studio. Just run it.
-	
-
-
-## 3. Cordova SDK API Methods & Constant Definitions
-   
-    HMSPush   
-        turnOffPush():promise<string>
-        turnOnPush():promise<string>
-        getID():promise<string>
-        getAAID():promise<string>
-        getToken():promise<string>
-        sendToken(String token):promise<string>
-        getCreationTime():promise<string>
-        deleteAAID():promise<string>
-        deleteToken():promise<string>
-        subscribe(String topic):promise<string>
-        unsubscribe(String topic):promise<string>
-        disableAutoInit():promise<string>
-        enableAutoInit():promise<string>
-        isAutoInitEnabled():promise<string>
-        onMessageReceived():promise<PushData>
-        
-    CordovaHmsMessageService    
-        onMessageReceived(): promise<PushData>    
-        onDeletedMessages():void 
-        onMessageSent(String msgId):void  
-        onSendError(String msgId, Exception exception):void  
-        onNewToken(String token):void 
-        
-    Constants
-        RESULT_SUCESS   
-        RESULT_FAIL    
-        PARAMETR_IS_EMPTY 
-        TOKEN_NOT_EXISTS
- 
-
-
-## 4. Configure parameters.    
-No.
-
-## 5. Licensing and Terms  
-Apache 2.0 license.
+Huawei Push Kit Cordova Plugin is licensed under the [Apache 2.0 license](LICENCE).
