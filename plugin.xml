@@ -80,7 +80,7 @@
 		<framework src="com.facebook.fresco:fresco:2.2.0"/>
 		<framework src="com.huawei.hms:push:5.1.1.301"/>
 		<framework src="src/android/build-extras.gradle" custom="true" type="gradleReference"></framework>
-		<framework src="hooks/build-extras.gradle" custom="true" type="gradleReference"/>
+
 		<source-file src="src/android/src/main/java/com/huawei/hms/cordova/push/HMSPush.java" target-dir="src/com/huawei/hms/cordova/push/"></source-file>
 		<source-file src="src/android/src/main/java/com/huawei/hms/cordova/push/basef/CordovaBaseModule.java" target-dir="src/com/huawei/hms/cordova/push/basef/"></source-file>
 		<source-file src="src/android/src/main/java/com/huawei/hms/cordova/push/basef/CordovaEvent.java" target-dir="src/com/huawei/hms/cordova/push/basef/"></source-file>
