@@ -19,7 +19,7 @@
 var FSUtils = require("./FSUtils");
 
 var DEST_DIR = "platforms/android/app/";
-var FILE_NAME = "agconnect-services.json";
+var FILE_NAME = "www/agconnect-services.json";
 
 module.exports = function (context) {
     var platforms = context.opts.platforms;
