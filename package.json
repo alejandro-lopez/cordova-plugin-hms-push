@@ -1,54 +1,60 @@
 {
-    "name": "@hmscore/cordova-plugin-hms-push",
-    "description": "Cordova HMS Push Plugin",
-    "version": "5.1.1-301",
-    "main": "./www/HmsPush.js",
-    "types": "./types/index.d.ts",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/HMS-Core/hms-cordova-plugin.git",
-        "directory": "cordova-plugin-hms-push"
-    },
-    "bugs": "https://github.com/HMS-Core/hms-cordova-plugin/issues",
-    "homepage": "https://developer.huawei.com/consumer/en/doc/overview/HMS-Core-Plugin",
-    "license": "Apache-2.0",
-    "licenseFilename": "LICENCE",
-    "readmeFilename": "README.md",
-    "cordova": {
-        "id": "cordova-plugin-hms-push",
-        "platforms": [
-            "android"
-        ]
-    },
-    "keywords": [
-        "cordova",
-        "ecosystem:cordova",
-        "cordova-android",
-        "push",
-        "hms-push",
-        "huawei-push",
-        "hms",
-        "huawei"
-    ],
-    "files": [
-        "hooks",
-        "ionic-native",
-        "src",
-        "types",
-        "www",
-        "LICENCE",
-        "package.json",
-        "plugin.xml",
-        "README.md",
-        "THIRD PARTY OPEN SOURCE SOFTWARE NOTICE.txt"
-    ],
-    "dependencies": {},
-    "devDependencies": {
-        "@types/cordova": "0.0.34",
-        "typescript": "3.9.9"
-    },
-    "scripts": {
-        "build": "node ./node_modules/typescript/bin/tsc",
-        "watch": "node ./node_modules/typescript/bin/tsc --watch"
-    }
+  "_from": "git+https://github.com/alejandro-lopez/cordova-plugin-hms-push.git",
+  "_id": "@hmscore/cordova-plugin-hms-push@5.0.0-300",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/@hmscore/cordova-plugin-hms-push",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/alejandro-lopez/cordova-plugin-hms-push",
+    "rawSpec": "https://github.com/alejandro-lopez/cordova-plugin-hms-push",
+    "saveSpec": "git+https://github.com/alejandro-lopez/cordova-plugin-hms-push.git",
+    "fetchSpec": "https://github.com/alejandro-lopez/cordova-plugin-hms-push.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/alejandro-lopez/cordova-plugin-hms-push.git#cb5d7037af2509e12be864f08b5e6d2a5c59c721",
+  "_spec": "https://github.com/alejandro-lopez/cordova-plugin-hms-push",
+  "_where": "C:\\SmartTracker_Huawei",
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-hms-push",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Huawei Push Cordova Plugin",
+  "devDependencies": {
+    "@types/cordova": "0.0.34"
+  },
+  "files": [
+    "hooks",
+    "resources",
+    "src",
+    "www",
+    "LICENCE",
+    "package.json",
+    "plugin.xml",
+    "README.md",
+    "ionic",
+    "scripts",
+    "types",
+    "wrapper",
+    "tsconfig.json"
+  ],
+  "keywords": [
+    "cordova",
+    "push",
+    "hmspush",
+    "huaweipush",
+    "ecosystem:cordova"
+  ],
+  "name": "@hmscore/cordova-plugin-hms-push",
+  "types": "types/index.d.ts",
+  "version": "5.0.0-300"
 }
