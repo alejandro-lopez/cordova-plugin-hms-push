@@ -1,5 +1,5 @@
 /*
-    Copyright 2020-2023. Huawei Technologies Co., Ltd. All rights reserved.
+    Copyright 2020-2024. Huawei Technologies Co., Ltd. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License")
     you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class HmsPushMessagePublisher {
-    private static String TAG = HmsPushMessagePublisher.class.getSimpleName();
+    private static final String TAG = HmsPushMessagePublisher.class.getSimpleName();
 
     public static void sendOnNewTokenEvent(String token) {
         try {
@@ -40,7 +40,6 @@ public class HmsPushMessagePublisher {
         } catch (JSONException ex) {
             Log.w(TAG, "sendOnNewTokenEvent: " + ex.getLocalizedMessage());
         }
-
     }
 
     public static void sendOnNewMultiSenderTokenEvent(String token, Bundle bundle) {
@@ -96,7 +95,6 @@ public class HmsPushMessagePublisher {
         } catch (JSONException ex) {
             Log.w(TAG, "sendOnMessageSentEvent: " + ex.getLocalizedMessage());
         }
-
     }
 
     public static void sendOnMessageSentErrorEvent(String msgId, int errorCode, String errorInfo) {
@@ -110,7 +108,6 @@ public class HmsPushMessagePublisher {
         } catch (JSONException ex) {
             Log.w(TAG, "sendOnMessageSentErrorEvent: " + ex.getLocalizedMessage());
         }
-
     }
 
     public static void sendOnMessageDeliveredEvent(String msgId, int errorCode, String errorInfo) {
@@ -124,7 +121,5 @@ public class HmsPushMessagePublisher {
         } catch (JSONException ex) {
             Log.w(TAG, "sendOnMessageDeliveredEvent: " + ex.getLocalizedMessage());
         }
-
     }
-
 }

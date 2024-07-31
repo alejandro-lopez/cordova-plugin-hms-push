@@ -1,5 +1,5 @@
 /*
-    Copyright 2020-2023. Huawei Technologies Co., Ltd. All rights reserved.
+    Copyright 2020-2024. Huawei Technologies Co., Ltd. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License")
     you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import org.apache.cordova.CordovaWebView;
 import org.json.JSONObject;
 
 public class CordovaUtils {
-
     private static final String TAG = CordovaUtils.class.getSimpleName();
 
     public static void sendEvent(final CordovaInterface cordova, final CordovaWebView webView, final String eventName,

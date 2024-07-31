@@ -1,5 +1,5 @@
 /*
-    Copyright 2020-2023. Huawei Technologies Co., Ltd. All rights reserved.
+    Copyright 2020-2024. Huawei Technologies Co., Ltd. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License")
     you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
 
 package com.huawei.hms.cordova.push;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.content.Intent;
 
 import com.huawei.hms.cordova.push.basef.handler.CordovaController;
 import com.huawei.hms.cordova.push.constants.Core;
@@ -46,16 +46,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class HMSPush extends CordovaPlugin {
-
     private static final String KIT = "Push";
 
-    private static final String VERSION = "6.7.0.300";
+    private static final String VERSION = "6.12.0.300";
 
     private static CordovaInterface staticCordova;
 
     private static CordovaWebView staticWebView;
 
-    private String TAG = HMSPush.class.getSimpleName();
+    private final String TAG = HMSPush.class.getSimpleName();
 
     private CordovaController cordovaController;
 

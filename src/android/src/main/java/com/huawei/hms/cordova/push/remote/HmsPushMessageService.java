@@ -1,5 +1,5 @@
 /*
-    Copyright 2020-2023. Huawei Technologies Co., Ltd. All rights reserved.
+    Copyright 2020-2024. Huawei Technologies Co., Ltd. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License")
     you may not use this file except in compliance with the License.
@@ -39,7 +39,6 @@ import static com.huawei.hms.cordova.push.utils.HtmlUtils.readFile;
 import static com.huawei.hms.cordova.push.utils.HtmlUtils.wrapInsideScriptTag;
 
 public class HmsPushMessageService extends HmsMessageService {
-
     private final static String TAG = HmsPushMessageService.class.getSimpleName();
 
     private static Boolean isApplicationRunning = false;

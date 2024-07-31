@@ -1,5 +1,5 @@
 /*
-    Copyright 2020-2023. Huawei Technologies Co., Ltd. All rights reserved.
+    Copyright 2020-2024. Huawei Technologies Co., Ltd. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License")
     you may not use this file except in compliance with the License.
@@ -69,11 +69,10 @@ public class HmsPushInstanceId extends CordovaBaseModule {
 
     @HMSLog
     @CordovaMethod
-    public void getToken(final CorPack corPack, JSONArray args, final Promise promise)
-        throws ApiException, JSONException {
+    public void getToken(final CorPack corPack, JSONArray args, final Promise promise) throws ApiException {
         String appId = new AGConnectOptionsBuilder().build(corPack.getCordova().getContext())
             .getString(Core.CLIENT_APP_ID);
-        String scope = args.optString(0, "HCM");
+        String scope = args.optString(0, Core.HCM);
         try {
             String token = hmsInstanceId.getToken(appId, scope);
             promise.success(token);
@@ -120,11 +119,10 @@ public class HmsPushInstanceId extends CordovaBaseModule {
 
     @HMSLog
     @CordovaMethod
-    public void deleteToken(final CorPack corPack, JSONArray args, final Promise promise)
-        throws ApiException, JSONException {
+    public void deleteToken(final CorPack corPack, JSONArray args, final Promise promise) throws ApiException {
         String appId = new AGConnectOptionsBuilder().build(corPack.getCordova().getContext())
             .getString(Core.CLIENT_APP_ID);
-        String scope = args.optString(0, "HCM");
+        String scope = args.optString(0, Core.HCM);
         HmsInstanceId.getInstance(corPack.getCordova().getContext()).deleteToken(appId, scope);
         promise.success(true);
     }
@@ -145,5 +143,4 @@ public class HmsPushInstanceId extends CordovaBaseModule {
             .addOnSuccessListener(odidResult -> promise.success(odidResult.getId()))
             .addOnFailureListener(e -> promise.error(e.getLocalizedMessage()));
     }
-
 }

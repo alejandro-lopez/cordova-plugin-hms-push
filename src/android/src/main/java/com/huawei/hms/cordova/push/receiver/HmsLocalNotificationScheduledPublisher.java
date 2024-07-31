@@ -1,5 +1,5 @@
 /*
-    Copyright 2020-2023. Huawei Technologies Co., Ltd. All rights reserved.
+    Copyright 2020-2024. Huawei Technologies Co., Ltd. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License")
     you may not use this file except in compliance with the License.
@@ -29,19 +29,15 @@ public class HmsLocalNotificationScheduledPublisher extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-
         final Bundle bundle = intent.getExtras();
         handleLocalNotification(context, bundle);
-
     }
 
     private void handleLocalNotification(Context context, Bundle bundle) {
-
         NotificationConfigUtils.configId(bundle);
 
         Application applicationContext = (Application) context.getApplicationContext();
-        HmsLocalNotificationController hmsLocalNotificationController = new HmsLocalNotificationController(
-            applicationContext);
+        HmsLocalNotificationController hmsLocalNotificationController = new HmsLocalNotificationController(applicationContext);
 
         hmsLocalNotificationController.localNotificationNow(bundle, null);
     }

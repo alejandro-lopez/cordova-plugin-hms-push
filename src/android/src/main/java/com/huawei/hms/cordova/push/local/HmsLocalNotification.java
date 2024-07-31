@@ -1,5 +1,5 @@
 /*
-    Copyright 2020-2023. Huawei Technologies Co., Ltd. All rights reserved.
+    Copyright 2020-2024. Huawei Technologies Co., Ltd. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License")
     you may not use this file except in compliance with the License.
@@ -35,7 +35,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 public class HmsLocalNotification extends CordovaBaseModule {
-
     private final String TAG = HmsLocalNotification.class.getSimpleName();
 
     private final HmsLocalNotificationController hmsLocalNotificationController;
@@ -141,5 +140,4 @@ public class HmsLocalNotification extends CordovaBaseModule {
     public void deleteChannel(final CorPack corPack, JSONArray args, final Promise promise) throws JSONException {
         hmsLocalNotificationController.deleteChannel(args.getString(0), promise);
     }
-
 }

@@ -1,5 +1,5 @@
 /*
-    Copyright 2020-2023. Huawei Technologies Co., Ltd. All rights reserved.
+    Copyright 2020-2024. Huawei Technologies Co., Ltd. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License")
     you may not use this file except in compliance with the License.
@@ -31,9 +31,9 @@ import org.json.JSONObject;
 import java.util.Locale;
 
 public class BackgroundWebViewLocalStorage {
-    private Context context;
+    private final Context context;
 
-    private WebView webView;
+    private final WebView webView;
 
     public BackgroundWebViewLocalStorage(Context context, WebView webView) {
         this.context = context;
@@ -74,7 +74,6 @@ public class BackgroundWebViewLocalStorage {
             }
         };
         mainHandler.post(myRunnable);
-
     }
 
     @JavascriptInterface

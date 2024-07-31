@@ -1,5 +1,5 @@
 /*
-    Copyright 2020-2023. Huawei Technologies Co., Ltd. All rights reserved.
+    Copyright 2020-2024. Huawei Technologies Co., Ltd. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License")
     you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ import com.huawei.hms.cordova.push.local.HmsLocalNotificationActionPublisher;
 import org.json.JSONException;
 
 public class NotificationActionHandler implements Runnable {
-    private static String TAG = NotificationActionHandler.class.getSimpleName();
+    private static final String TAG = NotificationActionHandler.class.getSimpleName();
 
     Bundle bundle;
 

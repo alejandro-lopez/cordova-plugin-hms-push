@@ -1,5 +1,5 @@
 /*
-    Copyright 2020-2023. Huawei Technologies Co., Ltd. All rights reserved.
+    Copyright 2020-2024. Huawei Technologies Co., Ltd. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License")
     you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@ package com.huawei.hms.cordova.push.local;
 
 import android.graphics.Bitmap;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.facebook.datasource.DataSource;
@@ -45,7 +46,7 @@ public class BitmapDataSubscriber extends BaseBitmapDataSubscriber {
     }
 
     @Override
-    public void onFailureImpl(DataSource dataSource) {
+    public void onFailureImpl(@NonNull DataSource dataSource) {
         if (bitmapType.equals(LocalNotification.Bitmap.LARGE_ICON)) {
             hmsLocalNotificationPicturesLoader.setLargeIcon(null);
         } else {
