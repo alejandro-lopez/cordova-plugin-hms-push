@@ -1,5 +1,5 @@
 /*
-    Copyright 2020-2023. Huawei Technologies Co., Ltd. All rights reserved.
+    Copyright 2020-2024. Huawei Technologies Co., Ltd. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License")
     you may not use this file except in compliance with the License.
@@ -14,19 +14,9 @@
     limitations under the License.
 */
 
-import {
-  Attr,
-  Importance,
-  Priority,
-  RepeatType,
-  Visibility,
-} from "./Interfaces";
-export declare function localNotification(
-  localNotification: LocalNotificationObject
-): Promise<any>;
-export declare function localNotificationSchedule(
-  localNotificationSchedule: LocalNotificationObject
-): Promise<any>;
+import { Attr, Importance, Priority, RepeatType, Visibility } from "./Interfaces";
+export declare function localNotification(localNotification: LocalNotificationObject): Promise<any>;
+export declare function localNotificationSchedule(localNotificationSchedule: LocalNotificationObject): Promise<any>;
 export declare function cancelAllNotifications(): Promise<boolean>;
 export declare function cancelNotifications(): Promise<boolean>;
 export declare function cancelScheduledNotifications(): Promise<boolean>;
